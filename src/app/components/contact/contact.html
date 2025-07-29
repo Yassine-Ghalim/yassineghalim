@@ -1,0 +1,91 @@
+<section class="contact py-5 bg-dark text-white" id="contact">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <h2 class="section-title">Me <span class="text-primary">contacter</span></h2>
+      <p class="section-subtitle">Disponible pour des opportunités et collaborations</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-5 mb-5 mb-lg-0">
+        <div class="contact-info">
+          <div class="contact-item d-flex mb-4">
+            <div class="icon me-3 text-primary">
+              <i class="bi bi-geo-alt-fill fs-4"></i>
+            </div>
+            <div>
+              <h5 class="mb-1">Localisation</h5>
+              <p class="mb-0">Rabat, Maroc</p>
+            </div>
+          </div>
+          
+          <div class="contact-item d-flex mb-4">
+            <div class="icon me-3 text-primary">
+              <i class="bi bi-envelope-fill fs-4"></i>
+            </div>
+            <div>
+              <h5 class="mb-1">Email</h5>
+              <p class="mb-0">contact ghalimyassine3&#64;gmail.com</p>
+            </div>
+          </div>
+          
+          <div class="contact-item d-flex mb-4">
+            <div class="icon me-3 text-primary">
+              <i class="bi bi-phone-fill fs-4"></i>
+            </div>
+            <div>
+              <h5 class="mb-1">Téléphone</h5>
+              <p class="mb-0">+212 6 35 18 54 25</p>
+            </div>
+          </div>
+          
+          <div class="social-links mt-4">
+            <h5 class="mb-3">Réseaux sociaux</h5>
+            <div class="d-flex gap-3">
+              <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+              <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-7">
+<form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+        <div class="row g-3">
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="name" placeholder="Votre nom" required ngModel name="name">
+                <label for="name">Votre nom</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input type="email" class="form-control" id="email" placeholder="Votre email" required ngModel name="email">
+                <label for="email">Votre email</label>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="subject" placeholder="Sujet" required ngModel name="subject">
+                <label for="subject">Sujet</label>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-floating">
+                <textarea class="form-control" id="message" placeholder="Votre message" style="height: 150px" required ngModel name="message"></textarea>
+                <label for="message">Votre message</label>
+              </div>
+            </div>
+            <div class="col-12 text-center text-lg-start">
+              <button type="submit" class="btn btn-primary btn-lg px-4" [disabled]="!contactForm.valid">
+                <span *ngIf="!isLoading">Envoyer le message</span>
+                <span *ngIf="isLoading" class="spinner-border spinner-border-sm"></span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

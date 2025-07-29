@@ -1,0 +1,64 @@
+.about {
+  background-color: #f8f9fa;
+  
+  .section-title {
+    position: relative;
+    padding-bottom: 15px;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 3px;
+      background: #0d6efd;
+    }
+  }
+  
+  .about-image-container {
+    max-width: 400px;
+    
+    .about-image {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      border: 5px solid white;
+    }
+    
+    .about-experience {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 120px;
+      text-align: center;
+      
+      h3 {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+    }
+  }
+  
+  .progress {
+    height: 8px;
+    border-radius: 4px;
+    background-color: #e9ecef;
+    
+    .progress-bar {
+      border-radius: 4px;
+    }
+  }
+  
+  .skill-item {
+    h6 {
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    .about-image-container {
+      margin: 0 auto;
+    }
+  }
+}

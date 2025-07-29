@@ -1,0 +1,32 @@
+<section class="projects py-5 bg-dark text-white" id="projects">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <h2 class="section-title">Mes <span class="text-primary">projets</span></h2>
+      <p class="section-subtitle">Découvrez mes réalisations récentes en DevOps et Cloud Computing</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" *ngFor="let project of projects">
+        <div class="project-card rounded overflow-hidden">
+          <div class="project-image">
+            <img [src]="project.image" [alt]="project.title" class="img-fluid">
+            <div class="project-overlay">
+              <a [href]="project.link" class="btn btn-primary btn-sm" target="_blank">Voir le projet</a>
+            </div>
+          </div>
+          <div class="project-content p-4">
+            <h5 class="mb-2">{{ project.title }}</h5>
+            <p class="text-white">{{ project.description }}</p>
+            <div class="project-tags">
+              <span class="badge bg-secondary me-1 mb-1" *ngFor="let tag of project.tags">{{ tag }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-5">
+      <a href="#" class="btn btn-outline-light">Voir plus de projets</a>
+    </div>
+  </div>
+</section>

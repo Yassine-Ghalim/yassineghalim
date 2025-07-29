@@ -1,0 +1,20 @@
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  
+  .social-links {
+    a {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background-color: #0d6efd;
+        transform: translateY(-3px);
+      }
+    }
+  }
+}

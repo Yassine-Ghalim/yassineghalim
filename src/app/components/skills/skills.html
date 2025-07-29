@@ -1,0 +1,52 @@
+<section class="skills py-5" id="skills">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <h2 class="section-title">Mes <span class="text-primary">compétences</span></h2>
+      <p class="section-subtitle">Technologies et outils que je maîtrise</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6">
+        <h3 class="skills-category mb-4">Cloud & DevOps</h3>
+        <div class="row g-3">
+          <div class="col-6 col-md-4" *ngFor="let skill of cloudSkills">
+            <div class="skill-item text-center p-3 rounded">
+              <div class="skill-icon mb-2">
+                <img [src]="skill.icon" [alt]="skill.name" class="img-fluid" width="50">
+              </div>
+              <h6 class="mb-0">{{ skill.name }}</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 mt-5 mt-lg-0">
+        <h3 class="skills-category mb-4">Outils & Technologies</h3>
+        <div class="row g-3">
+          <div class="col-6 col-md-4" *ngFor="let skill of techSkills">
+            <div class="skill-item text-center p-3 rounded">
+              <div class="skill-icon mb-2">
+                <img [src]="skill.icon" [alt]="skill.name" class="img-fluid" width="50">
+              </div>
+              <h6 class="mb-0">{{ skill.name }}</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="certifications mt-5 pt-4">
+      <h3 class="skills-category text-center mb-4">Certifications</h3>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4" *ngFor="let cert of certifications">
+          <div class="certification-card p-4 rounded text-center h-100">
+            <img [src]="cert.image" [alt]="cert.name" class="img-fluid mb-3" width="100">
+            <h5 class="mb-2">{{ cert.name }}</h5>
+            <p class="text-muted mb-2">{{ cert.issuer }}</p>
+            <small class="text-primary">{{ cert.year }}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
